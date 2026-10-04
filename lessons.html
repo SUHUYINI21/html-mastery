@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>HTML Lessons | HTML Mastery</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <header class="navbar">
+
+    <a href="index.html" class="brand">
+        <img src="tfi-logo.jpeg" alt="The FinTech Innovators logo">
+
+        <div>
+            <strong>THE FINTECH INNOVATORS</strong>
+            <span>HTML MASTERY</span>
+        </div>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="cheat-sheet.html">Cheat Sheet</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+</header>
+
+
+  <!-- PAGE INTRO -->
+
+  <section class="course-hero">
+
+    <div>
+
+      <span class="badge">
+        HTML COURSE
+      </span>
+
+      <h1>
+        Learn HTML<br>
+        <span>From Zero.</span>
+      </h1>
+
+      <p>
+        Follow these lessons in order and build
+        a strong foundation in HTML.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- COURSE -->
+
+  <main class="course-container">
+   <div class="progress-container">
+
+    <div class="progress-header">
+        <strong>Your Course Progress</strong>
+
+        <span id="progress-text">
+            0 / 24 Lessons Completed — 0%
+        </span>
+    </div>
+
+    <div class="progress-track">
+        <div id="progress-bar"></div>
+    </div>
+
+    <button class="reset-progress" onclick="resetProgress()">
+        ↻ Reset Course Progress
+    </button>
+
+</div>
+    <!-- 01 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 01
+      </span>
+
+      <h2>What is HTML?</h2>
+
+      <p>
+        HTML stands for
+        <strong>HyperText Markup Language</strong>.
+        It is the standard markup language used
+        to structure content on webpages.
+      </p>
+
+      <p>
+        HTML tells the browser what different
+        pieces of content are. For example,
+        a heading is different from a paragraph,
+        an image or a link.
+      </p>
+
+      <div class="concept-box">
+
+        <strong>Think of a website like a house:</strong>
+
+        <ul>
+          <li>HTML = structure</li>
+          <li>CSS = appearance</li>
+          <li>JavaScript = behavior</li>
+        </ul>
+
+      </div>
+      <button class="complete-lesson" onclick="completeLesson(1)">
+    Mark Lesson Complete ✓
+</button>
+
+    </article>
+
+
+    <!-- 02 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 02
+      </span>
+
+      <h2>HTML Document Structure</h2>
+
+      <p>
+        Every normal HTML document has a basic
+        structure.
+      </p>
+
+      <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+  &lt;title&gt;My Website&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+      <div class="note-box">
+
+        <strong>Important:</strong>
+
+        <p>
+          The <code>&lt;head&gt;</code> contains
+          information about the document, while
+          the <code>&lt;body&gt;</code> contains
+          the content users see.
+        </p>
+
+      </div>
+      <button class="complete-lesson" onclick="completeLesson(2)">
+    Mark Lesson Complete ✓
+</button>
+
+    </article>
+
+
+    <!-- 03 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 03
+      </span>
+
+      <h2>Tags, Elements & Attributes</h2>
+
+      <p>
+        HTML is built using elements. Most elements
+        have an opening tag and closing tag.
+      </p>
+
+      <pre><code>&lt;p&gt;Hello World&lt;/p&gt;</code></pre>
+
+      <p>
+        Here, <code>&lt;p&gt;</code> is the opening
+        tag and <code>&lt;/p&gt;</code> is the
+        closing tag.
+      </p>
+
+      <p>
+        Attributes provide additional information.
+      </p>
+
+      <pre><code>&lt;a href="https://example.com"&gt;
+  Visit Website
+&lt;/a&gt;</code></pre>
+
+      <p>
+        Here, <code>href</code> is an attribute.
+      </p>
+      <button class="complete-lesson" onclick="completeLesson(3)">
+    Mark Lesson Complete ✓
+</button>
+
+    </article>
+
+
+    <!-- 04 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 04
+      </span>
+
+      <h2>Headings</h2>
+
+      <p>
+        HTML has six heading levels,
+        from <code>&lt;h1&gt;</code> to
+        <code>&lt;h6&gt;</code>.
+      </p>
+
+      <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Section Heading&lt;/h2&gt;
+&lt;h3&gt;Subsection&lt;/h3&gt;
+&lt;h4&gt;Smaller Heading&lt;/h4&gt;
+&lt;h5&gt;Smaller Heading&lt;/h5&gt;
+&lt;h6&gt;Smallest Heading&lt;/h6&gt;</code></pre>
+
+      <div class="note-box">
+
+        <strong>Best practice:</strong>
+
+        <p>
+          Use headings to create a logical content
+          hierarchy rather than simply choosing a
+          heading because it looks bigger.
+        </p>
+
+      </div>
+      <button class="complete-lesson" onclick="completeLesson(4)">
+    Mark Lesson Complete ✓
+</button>
+
+    </article>
+
+
+    <!-- 05 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 05
+      </span>
+
+      <h2>Paragraphs & Text</h2>
+
+      <pre><code>&lt;p&gt;
+  HTML is used to structure webpages.
+&lt;/p&gt;</code></pre>
+
+      <p>
+        You can also emphasize text using semantic
+        elements.
+      </p>
+
+      <pre><code>&lt;strong&gt;Important text&lt;/strong&gt;
+
+&lt;em&gt;Emphasized text&lt;/em&gt;
+
+&lt;mark&gt;Highlighted text&lt;/mark&gt;</code></pre>
+<button class="complete-lesson" onclick="completeLesson(5)">
+    Mark Lesson Complete ✓
+</button>
+
+    </article>
+
+
+    <!-- 06 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 06
+      </span>
+
+      <h2>Links</h2>
+
+      <p>
+        The anchor element creates hyperlinks.
+      </p>
+
+      <pre><code>&lt;a href="https://example.com"&gt;
+  Visit Example
+&lt;/a&gt;</code></pre>
+
+      <p>
+        You can also link to another page in your
+        own website.
+      </p>
+
+      <pre><code>&lt;a href="about.html"&gt;
+  About Us
+&lt;/a&gt;</code></pre>
+
+      <p>
+        To open a link in a new tab:
+      </p>
+
+      <pre><code>&lt;a
+  href="https://example.com"
+  target="_blank"
+  rel="noopener"
+&gt;
+  Open Website
+&lt;/a&gt;</code></pre>
+<button class="complete-lesson" onclick="completeLesson(6)">
+    Mark Lesson Complete ✓
+</button>
+
+    </article>
+
+
+    <!-- 07 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 07
+      </span>
+
+      <h2>Images</h2>
+
+      <p>
+        Images are added using the
+        <code>&lt;img&gt;</code> element.
+      </p>
+
+      <pre><code>&lt;img
+  src="photo.jpg"
+  alt="A person standing outside"
+&gt;</code></pre>
+
+      <div class="warning-box">
+
+        <strong>⚠️ Don't forget alt text.</strong>
+
+        <p>
+          The <code>alt</code> attribute provides
+          a text alternative for an image.
+        </p>
+
+      </div>
+<button class="complete-lesson" onclick="completeLesson(7)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 08 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 08
+      </span>
+
+      <h2>Lists</h2>
+
+      <h3>Unordered list</h3>
+
+      <pre><code>&lt;ul&gt;
+  &lt;li&gt;HTML&lt;/li&gt;
+  &lt;li&gt;CSS&lt;/li&gt;
+  &lt;li&gt;JavaScript&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+      <h3>Ordered list</h3>
+
+      <pre><code>&lt;ol&gt;
+  &lt;li&gt;Learn HTML&lt;/li&gt;
+  &lt;li&gt;Learn CSS&lt;/li&gt;
+  &lt;li&gt;Learn JavaScript&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+<button class="complete-lesson" onclick="completeLesson(8)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 09 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 09
+      </span>
+
+      <h2>Tables</h2>
+
+      <p>
+        Tables are used for tabular data.
+      </p>
+
+      <pre><code>&lt;table&gt;
+
+  &lt;tr&gt;
+    &lt;th&gt;Name&lt;/th&gt;
+    &lt;th&gt;Age&lt;/th&gt;
+  &lt;/tr&gt;
+
+  &lt;tr&gt;
+    &lt;td&gt;John&lt;/td&gt;
+    &lt;td&gt;25&lt;/td&gt;
+  &lt;/tr&gt;
+
+&lt;/table&gt;</code></pre>
+
+      <p>
+        <code>&lt;tr&gt;</code> creates a row,
+        <code>&lt;th&gt;</code> creates a header
+        cell and <code>&lt;td&gt;</code> creates
+        a data cell.
+      </p>
+<button class="complete-lesson" onclick="completeLesson(9)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 10 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 10
+      </span>
+
+      <h2>Forms</h2>
+
+      <p>
+        Forms allow users to submit information.
+      </p>
+
+      <pre><code>&lt;form&gt;
+
+  &lt;label&gt;Name&lt;/label&gt;
+
+  &lt;input
+    type="text"
+    placeholder="Enter your name"
+  &gt;
+
+  &lt;button type="submit"&gt;
+    Submit
+  &lt;/button&gt;
+
+&lt;/form&gt;</code></pre>
+<button class="complete-lesson" onclick="completeLesson(10)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 11 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 11
+      </span>
+
+      <h2>Input Types</h2>
+
+      <p>
+        HTML provides different input types
+        for different kinds of data.
+      </p>
+
+      <pre><code>&lt;input type="text"&gt;
+
+&lt;input type="email"&gt;
+
+&lt;input type="password"&gt;
+
+&lt;input type="number"&gt;
+
+&lt;input type="date"&gt;
+
+&lt;input type="checkbox"&gt;
+
+&lt;input type="radio"&gt;
+
+&lt;input type="file"&gt;
+
+&lt;input type="submit"&gt;</code></pre>
+<button class="complete-lesson" onclick="completeLesson(11)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 12 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 12
+      </span>
+
+      <h2>Labels & Form Accessibility</h2>
+
+      <p>
+        Labels tell users what an input field is for.
+        They also help assistive technologies.
+      </p>
+
+      <pre><code>&lt;label for="email"&gt;
+  Email Address
+&lt;/label&gt;
+
+&lt;input
+  id="email"
+  type="email"
+&gt;</code></pre>
+
+      <div class="note-box">
+
+        <strong>Remember:</strong>
+
+        <p>
+          The label's <code>for</code> value should
+          match the input's <code>id</code>.
+        </p>
+
+      </div>
+<button class="complete-lesson" onclick="completeLesson(12)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 13 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 13
+      </span>
+
+      <h2>Audio & Video</h2>
+
+      <h3>Audio</h3>
+
+      <pre><code>&lt;audio controls&gt;
+  &lt;source
+    src="music.mp3"
+    type="audio/mpeg"
+  &gt;
+&lt;/audio&gt;</code></pre>
+
+      <h3>Video</h3>
+
+      <pre><code>&lt;video controls width="600"&gt;
+  &lt;source
+    src="video.mp4"
+    type="video/mp4"
+  &gt;
+&lt;/video&gt;</code></pre>
+<button class="complete-lesson" onclick="completeLesson(13)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 14 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 14
+      </span>
+
+      <h2>Div & Span</h2>
+
+      <p>
+        <code>&lt;div&gt;</code> is a generic block
+        container.
+      </p>
+
+      <pre><code>&lt;div&gt;
+  &lt;h2&gt;My Section&lt;/h2&gt;
+  &lt;p&gt;Some content&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+      <p>
+        <code>&lt;span&gt;</code> is commonly used
+        for small pieces of inline content.
+      </p>
+
+      <pre><code>&lt;p&gt;
+  Learn
+  &lt;span&gt;HTML&lt;/span&gt;
+  today.
+&lt;/p&gt;</code></pre>
+<button class="complete-lesson" onclick="completeLesson(14)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 15 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 15
+      </span>
+
+      <h2>Classes & IDs</h2>
+
+      <p>
+        Classes and IDs allow elements to be
+        identified and styled.
+      </p>
+
+      <pre><code>&lt;p class="intro"&gt;
+  Welcome!
+&lt;/p&gt;
+
+&lt;section id="about"&gt;
+  About us
+&lt;/section&gt;</code></pre>
+
+      <p>
+        A class can be reused on multiple elements.
+        An ID should identify a unique element
+        within the document.
+      </p>
+<button class="complete-lesson" onclick="completeLesson(15)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 16 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 16
+      </span>
+
+      <h2>Semantic HTML</h2>
+
+      <p>
+        Semantic elements communicate the purpose
+        of different parts of a webpage.
+      </p>
+
+      <pre><code>&lt;header&gt;
+  Website Header
+&lt;/header&gt;
+
+&lt;nav&gt;
+  Navigation
+&lt;/nav&gt;
+
+&lt;main&gt;
+
+  &lt;section&gt;
+    Main Section
+  &lt;/section&gt;
+
+  &lt;article&gt;
+    Article
+  &lt;/article&gt;
+
+&lt;/main&gt;
+
+&lt;footer&gt;
+  Website Footer
+&lt;/footer&gt;</code></pre>
+
+      <p>
+        Common semantic elements include
+        <code>header</code>, <code>nav</code>,
+        <code>main</code>, <code>section</code>,
+        <code>article</code> and <code>footer</code>.
+      </p>
+<button class="complete-lesson" onclick="completeLesson(16)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 17 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 17
+      </span>
+
+      <h2>Comments</h2>
+
+      <p>
+        Comments are notes in your code that the
+        browser does not display as webpage content.
+      </p>
+
+      <pre><code>&lt;!--
+  This is a comment.
+--&gt;</code></pre>
+
+      <p>
+        Comments are useful for explaining sections
+        of your code.
+      </p>
+<button class="complete-lesson" onclick="completeLesson(17)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 18 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 18
+      </span>
+
+      <h2>HTML Entities</h2>
+
+      <p>
+        Some characters have special meanings in
+        HTML and need to be represented using
+        entities.
+      </p>
+
+      <pre><code>&amp;lt;   &lt;
+&amp;gt;   &gt;
+&amp;amp;  &amp;
+&amp;copy; ©
+&amp;nbsp; space</code></pre>
+<button class="complete-lesson" onclick="completeLesson(18)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 19 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 19
+      </span>
+
+      <h2>Meta Information</h2>
+
+      <p>
+        Metadata provides information about your
+        webpage to browsers and other systems.
+      </p>
+
+      <pre><code>&lt;meta charset="UTF-8"&gt;
+
+&lt;meta
+  name="viewport"
+  content="width=device-width,
+  initial-scale=1.0"
+&gt;
+
+&lt;meta
+  name="description"
+  content="Learn HTML from zero."
+&gt;</code></pre>
+<button class="complete-lesson" onclick="completeLesson(19)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 20 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 20
+      </span>
+
+      <h2>HTML & Accessibility</h2>
+
+      <p>
+        Accessible HTML helps people with different
+        abilities use your website.
+      </p>
+
+      <ul>
+        <li>Use meaningful headings.</li>
+        <li>Add useful alt text to images.</li>
+        <li>Use labels with form controls.</li>
+        <li>Use semantic HTML where appropriate.</li>
+        <li>Make links descriptive.</li>
+      </ul>
+
+      <div class="note-box">
+
+        <strong>Example:</strong>
+
+        <p>
+          Prefer "Read our pricing guide" over a
+          vague link such as "Click here."
+        </p>
+
+      </div>
+<button class="complete-lesson" onclick="completeLesson(20)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 21 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 21
+      </span>
+
+      <h2>HTML & SEO</h2>
+
+      <p>
+        Good HTML structure can help search engines
+        understand your content.
+      </p>
+
+      <pre><code>&lt;title&gt;
+  Learn HTML | HTML Mastery
+&lt;/title&gt;
+
+&lt;meta
+  name="description"
+  content="A complete HTML course
+  for beginners."
+&gt;</code></pre>
+
+      <p>
+        Clear headings, meaningful page titles,
+        descriptive links and useful content
+        are important parts of a well-structured
+        webpage.
+      </p>
+<button class="complete-lesson" onclick="completeLesson(21)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 22 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 22
+      </span>
+
+      <h2>HTML Validation</h2>
+
+      <p>
+        Browsers can often recover from mistakes,
+        but valid, well-structured HTML is easier
+        to maintain and understand.
+      </p>
+
+      <div class="warning-box">
+
+        <strong>Common mistakes:</strong>
+
+        <ul>
+          <li>Forgetting closing tags.</li>
+          <li>Incorrect nesting.</li>
+          <li>Missing quotation marks.</li>
+          <li>Missing alt text.</li>
+          <li>Using inappropriate elements.</li>
+        </ul>
+
+      </div>
+<button class="complete-lesson" onclick="completeLesson(22)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 23 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 23
+      </span>
+
+      <h2>HTML + CSS + JavaScript</h2>
+
+      <p>
+        Modern webpages commonly use three
+        technologies together.
+      </p>
+
+      <div class="three-column">
+
+        <div>
+          <strong>HTML</strong>
+          <p>Structure</p>
+        </div>
+
+        <div>
+          <strong>CSS</strong>
+          <p>Presentation</p>
+        </div>
+
+        <div>
+          <strong>JavaScript</strong>
+          <p>Behavior</p>
+        </div>
+
+      </div>
+
+      <pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;
+
+&lt;style&gt;
+  h1 {
+    color: orange;
+  }
+&lt;/style&gt;
+
+&lt;script&gt;
+  console.log("Hello!");
+&lt;/script&gt;</code></pre>
+<button class="complete-lesson" onclick="completeLesson(23)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- 24 -->
+
+    <article class="lesson-card">
+
+      <span class="lesson-number">
+        LESSON 24
+      </span>
+
+      <h2>Build a Complete Webpage</h2>
+
+      <p>
+        Now combine what you've learned.
+      </p>
+
+      <pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+
+  &lt;meta charset="UTF-8"&gt;
+
+  &lt;title&gt;
+    My Website
+  &lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+  &lt;header&gt;
+
+    &lt;h1&gt;
+      My Website
+    &lt;/h1&gt;
+
+    &lt;nav&gt;
+
+      &lt;a href="#"&gt;
+        Home
+      &lt;/a&gt;
+
+      &lt;a href="#"&gt;
+        About
+      &lt;/a&gt;
+
+    &lt;/nav&gt;
+
+  &lt;/header&gt;
+
+
+  &lt;main&gt;
+
+    &lt;section&gt;
+
+      &lt;h2&gt;
+        Welcome
+      &lt;/h2&gt;
+
+      &lt;p&gt;
+        This is my first website.
+      &lt;/p&gt;
+
+      &lt;img
+        src="photo.jpg"
+        alt="My photo"
+      &gt;
+
+    &lt;/section&gt;
+
+  &lt;/main&gt;
+
+
+  &lt;footer&gt;
+
+    &lt;p&gt;
+      © 2026 My Website
+    &lt;/p&gt;
+
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+<button class="complete-lesson" onclick="completeLesson(24)">
+    Mark Lesson Complete ✓
+</button>
+    </article>
+
+
+    <!-- FINAL -->
+
+    <article class="lesson-card final-lesson">
+
+      <span class="lesson-number">
+        YOU MADE IT 🎉
+      </span>
+
+      <h2>What's Next?</h2>
+
+      <p>
+        You now understand the core concepts
+        needed to start building webpages with HTML.
+      </p>
+
+      <div class="next-steps">
+
+        <div>
+          <strong>01</strong>
+          <span>Practice HTML</span>
+        </div>
+
+        <div>
+          <strong>02</strong>
+          <span>Learn CSS</span>
+        </div>
+
+        <div>
+          <strong>03</strong>
+          <span>Learn JavaScript</span>
+        </div>
+
+        <div>
+          <strong>04</strong>
+          <span>Build Projects</span>
+        </div>
+
+      </div>
+
+      <a
+        href="cheat-sheet.html"
+        class="btn primary"
+      >
+        Open HTML Cheat Sheet →
+      </a>
+
+    </article>
+
+
+  </main>
+
+
+  <footer>
+
+    <p>&lt;HTMLMastery/&gt;</p>
+
+    <span>
+      Learn HTML. Build the Web.
+    </span>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

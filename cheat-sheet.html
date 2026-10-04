@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>HTML Cheat Sheet | HTML Mastery</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+  <!-- NAVIGATION -->
+
+  <header class="navbar">
+
+    <a href="index.html" class="brand">
+        <img src="tfi-logo.jpeg" alt="The FinTech Innovators logo">
+
+        <div>
+            <strong>THE FINTECH INNOVATORS</strong>
+            <span>HTML MASTERY</span>
+        </div>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="cheat-sheet.html">Cheat Sheet</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+</header>
+
+
+
+  <!-- HERO -->
+
+  <section class="course-hero">
+
+    <div>
+
+      <span class="badge">
+        HTML REFERENCE
+      </span>
+
+      <h1>
+        HTML <span>Cheat Sheet</span>
+      </h1>
+
+      <p>
+        Search for an HTML element and quickly
+        learn what it does.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- SEARCH -->
+
+  <main class="cheat-container">
+
+    <div class="cheat-search">
+
+      <input
+        type="text"
+        id="searchBox"
+        placeholder="Search HTML tags..."
+      >
+
+    </div>
+
+
+    <!-- RESULTS -->
+
+    <div
+      id="results"
+      class="tag-grid"
+    ></div>
+
+
+    <p
+      id="noResults"
+      class="no-results"
+    >
+      No matching HTML tags found.
+    </p>
+
+  </main>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      &lt;HTMLMastery/&gt;
+    </p>
+
+    <span>
+      Learn HTML. Build the Web.
+    </span>
+
+  </footer>
+
+
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    const htmlTags = [
+
+      {
+        tag: "&lt;h1&gt;",
+        name: "Heading",
+        description: "Creates the main heading of a webpage.",
+        code: "&lt;h1&gt;My Heading&lt;/h1&gt;"
+      },
+
+      {
+        tag: "&lt;h2&gt;",
+        name: "Heading 2",
+        description: "Creates a second-level heading.",
+        code: "&lt;h2&gt;Section Title&lt;/h2&gt;"
+      },
+
+      {
+        tag: "&lt;p&gt;",
+        name: "Paragraph",
+        description: "Creates a paragraph of text.",
+        code: "&lt;p&gt;Hello World&lt;/p&gt;"
+      },
+
+      {
+        tag: "&lt;a&gt;",
+        name: "Link",
+        description: "Creates a hyperlink.",
+        code: '&lt;a href="https://example.com"&gt;Visit&lt;/a&gt;'
+      },
+
+      {
+        tag: "&lt;img&gt;",
+        name: "Image",
+        description: "Displays an image on a webpage.",
+        code: '&lt;img src="photo.jpg" alt="My photo"&gt;'
+      },
+
+      {
+        tag: "&lt;ul&gt;",
+        name: "Unordered List",
+        description: "Creates a bulleted list.",
+        code: "&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;"
+      },
+
+      {
+        tag: "&lt;ol&gt;",
+        name: "Ordered List",
+        description: "Creates a numbered list.",
+        code: "&lt;ol&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ol&gt;"
+      },
+
+      {
+        tag: "&lt;li&gt;",
+        name: "List Item",
+        description: "Creates an item inside a list.",
+        code: "&lt;li&gt;HTML&lt;/li&gt;"
+      },
+
+      {
+        tag: "&lt;table&gt;",
+        name: "Table",
+        description: "Creates a table for displaying data.",
+        code: "&lt;table&gt;...&lt;/table&gt;"
+      },
+
+      {
+        tag: "&lt;tr&gt;",
+        name: "Table Row",
+        description: "Creates a row inside a table.",
+        code: "&lt;tr&gt;...&lt;/tr&gt;"
+      },
+
+      {
+        tag: "&lt;th&gt;",
+        name: "Table Header",
+        description: "Creates a header cell in a table.",
+        code: "&lt;th&gt;Name&lt;/th&gt;"
+      },
+
+      {
+        tag: "&lt;td&gt;",
+        name: "Table Data",
+        description: "Creates a data cell in a table.",
+        code: "&lt;td&gt;John&lt;/td&gt;"
+      },
+
+      {
+        tag: "&lt;form&gt;",
+        name: "Form",
+        description: "Creates a form for collecting information.",
+        code: "&lt;form&gt;...&lt;/form&gt;"
+      },
+
+      {
+        tag: "&lt;label&gt;",
+        name: "Label",
+        description: "Labels an input field.",
+        code: '&lt;label for="name"&gt;Name&lt;/label&gt;'
+      },
+
+      {
+        tag: "&lt;input&gt;",
+        name: "Input",
+        description: "Creates an input field.",
+        code: '&lt;input type="text"&gt;'
+      },
+
+      {
+        tag: "&lt;textarea&gt;",
+        name: "Text Area",
+        description: "Creates a multi-line text field.",
+        code: "&lt;textarea&gt;&lt;/textarea&gt;"
+      },
+
+      {
+        tag: "&lt;select&gt;",
+        name: "Dropdown",
+        description: "Creates a dropdown menu.",
+        code: "&lt;select&gt;...&lt;/select&gt;"
+      },
+
+      {
+        tag: "&lt;button&gt;",
+        name: "Button",
+        description: "Creates a clickable button.",
+        code: "&lt;button&gt;Click Me&lt;/button&gt;"
+      },
+
+      {
+        tag: "&lt;audio&gt;",
+        name: "Audio",
+        description: "Adds audio content to a webpage.",
+        code: "&lt;audio controls&gt;...&lt;/audio&gt;"
+      },
+
+      {
+        tag: "&lt;video&gt;",
+        name: "Video",
+        description: "Adds video content to a webpage.",
+        code: "&lt;video controls&gt;...&lt;/video&gt;"
+      },
+
+      {
+        tag: "&lt;iframe&gt;",
+        name: "Iframe",
+        description: "Embeds another webpage or external content.",
+        code: '&lt;iframe src="page.html"&gt;&lt;/iframe&gt;'
+      },
+
+      {
+        tag: "&lt;div&gt;",
+        name: "Division",
+        description: "Creates a general block container.",
+        code: "&lt;div&gt;Content&lt;/div&gt;"
+      },
+
+      {
+        tag: "&lt;span&gt;",
+        name: "Span",
+        description: "Creates a general inline container.",
+        code: "&lt;span&gt;Text&lt;/span&gt;"
+      },
+
+      {
+        tag: "&lt;header&gt;",
+        name: "Header",
+        description: "Defines introductory or header content.",
+        code: "&lt;header&gt;...&lt;/header&gt;"
+      },
+
+      {
+        tag: "&lt;nav&gt;",
+        name: "Navigation",
+        description: "Contains navigation links.",
+        code: "&lt;nav&gt;...&lt;/nav&gt;"
+      },
+
+      {
+        tag: "&lt;main&gt;",
+        name: "Main",
+        description: "Contains the main content of the page.",
+        code: "&lt;main&gt;...&lt;/main&gt;"
+      },
+
+      {
+        tag: "&lt;section&gt;",
+        name: "Section",
+        description: "Defines a section of related content.",
+        code: "&lt;section&gt;...&lt;/section&gt;"
+      },
+
+      {
+        tag: "&lt;article&gt;",
+        name: "Article",
+        description: "Defines self-contained content.",
+        code: "&lt;article&gt;...&lt;/article&gt;"
+      },
+
+      {
+        tag: "&lt;footer&gt;",
+        name: "Footer",
+        description: "Defines footer content.",
+        code: "&lt;footer&gt;...&lt;/footer&gt;"
+      }
+
+    ];
+
+
+    const results =
+      document.getElementById("results");
+
+    const searchBox =
+      document.getElementById("searchBox");
+
+    const noResults =
+      document.getElementById("noResults");
+
+
+    function showTags(list) {
+
+      results.innerHTML = "";
+
+      noResults.style.display = "none";
+
+
+      if (list.length === 0) {
+
+        noResults.style.display = "block";
+
+        return;
+
+      }
+
+
+      list.forEach(function(item) {
+
+        const card =
+          document.createElement("div");
+
+        card.className = "tag-card";
+
+
+        card.innerHTML =
+
+          '<div class="tag-name">' +
+          item.tag +
+          '</div>' +
+
+          '<h3>' +
+          item.name +
+          '</h3>' +
+
+          '<p>' +
+          item.description +
+          '</p>' +
+
+          '<div class="tag-example">' +
+
+          '<span>Example</span>' +
+
+          '<code>' +
+          item.code +
+          '</code>' +
+
+          '</div>' +
+
+          '<button class="copy-tag">' +
+          'Copy Code' +
+          '</button>';
+
+
+        const copyButton =
+          card.querySelector(".copy-tag");
+
+
+        copyButton.addEventListener(
+          "click",
+          function() {
+
+            const temporary =
+              document.createElement("textarea");
+
+            temporary.innerHTML =
+              item.code;
+
+            document.body.appendChild(temporary);
+
+            temporary.select();
+
+            document.execCommand("copy");
+
+            temporary.remove();
+
+            copyButton.textContent =
+              "Copied ✓";
+
+
+            setTimeout(function() {
+
+              copyButton.textContent =
+                "Copy Code";
+
+            }, 1200);
+
+          }
+        );
+
+
+        results.appendChild(card);
+
+      });
+
+    }
+
+
+    searchBox.addEventListener(
+      "input",
+      function() {
+
+        const search =
+          searchBox.value.toLowerCase();
+
+
+        const filtered =
+          htmlTags.filter(function(item) {
+
+            return (
+
+              item.name
+                .toLowerCase()
+                .includes(search)
+
+              ||
+
+              item.description
+                .toLowerCase()
+                .includes(search)
+
+              ||
+
+              item.tag
+                .toLowerCase()
+                .includes(search)
+
+            );
+
+          });
+
+
+        showTags(filtered);
+
+      }
+    );
+
+
+    showTags(htmlTags);
+
+  </script>
+
+
+</body>
+
+</html>
